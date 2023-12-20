@@ -1,0 +1,274 @@
+:root {
+    --clr-primary-100: hsl(4, 100%, 67%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-200: hsl(231, 7%, 60%);
+    --clr-neutral-300: hsl(235, 18%, 26%);
+    --clr-neutral-400: hsl(234, 29%, 20%);
+    --ff-primary: "Roboto", sans-serif;
+    --fw-regular: 400;
+    --fw-semi-bold: 700;
+    --fs-100: 1rem;
+    --fs-200: 3rem;
+    --ff-body: var(--ff-primary);
+    --fs-body: var(--fs-100);
+    --fs-primary-heading: var(--fs-200);
+    --size-100: .25rem;
+    --size-200: .5rem;
+    --size-300: .75rem;
+    --size-400: 1rem;
+    --size-500: 1.5rem;
+    --size-600: 2rem;
+    --size-700: 3rem;
+    --size-800: 4rem;
+    --size-900: 5rem
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin-block-end: 0
+}
+
+ul[role=list],
+ol[role=list] {
+    list-style: none
+}
+
+html:focus-within {
+    scroll-behavior: smooth
+}
+
+body {
+    min-height: 100%;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto
+}
+
+img,
+picture {
+    border-radius: 0;
+    max-width: 100%;
+    display: block
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto
+    }
+
+    *,
+    *:before,
+    *:after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important
+    }
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-size: var(--fs-body);
+    font-family: var(--ff-body);
+    color: var(--clr-neutral-400);
+    background-color: #fff
+}
+
+@media (min-width:50em) {
+    body {
+        display: flex;
+        background-color: var(--clr-neutral-400)
+    }
+}
+
+p {
+    max-width: 42ch;
+    padding-left: 8px
+}
+
+i {
+    font-size: var(--fs-100);
+    color: var(--clr-primary-100)
+}
+
+#i1 {
+    display: none
+}
+
+@media (min-width: 50em) {
+    #i1 {
+        display: block
+    }
+
+    #i2 {
+        display: none
+    }
+}
+
+.container {
+    background-color: var(--clr-neutral-100)
+}
+
+@media (min-width: 50em) {
+    .container {
+        padding: 1rem;
+        border-radius: 1rem
+    }
+}
+
+.even-columns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse
+}
+
+@media (min-width: 50em) {
+    .even-columns {
+        flex-direction: row;
+        gap: 1rem;
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr
+    }
+}
+
+ul li {
+    padding: -1rem 0;
+    line-height: 2
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem
+}
+
+label,
+span {
+    font-size: .7rem
+}
+
+span {
+    padding-left: 7rem
+}
+
+@media (min-width: 50em) {
+    span {
+        padding-left: 10rem
+    }
+}
+
+input[type=email],
+button {
+    cursor: pointer;
+    border: 0;
+    padding: .75rem;
+    border-radius: 5px
+}
+
+input[type=email]:hover {
+    outline: 1px solid var(--clr-neutral-200);
+    cursor: auto
+}
+
+input[type=email]:focus {
+    outline: 1px solid var(--clr-neutral-200)
+}
+
+button {
+    color: #fff;
+    background: var(--clr-neutral-400);
+    transition: background ease-in-out
+}
+
+button:hover {
+    background: linear-gradient(to right, rgb(255, 84, 118), rgb(255, 102, 69))
+}
+
+.text-primary-100 {
+    color: var(--clr-primary-100)
+}
+
+.text-neutral-100 {
+    color: var(--clr-neutral-100)
+}
+
+.text-neutral-200 {
+    color: var(--clr-neutral-200)
+}
+
+.text-neutral-300 {
+    color: var(--clr-neutral-300)
+}
+
+.text-neutral-400 {
+    color: var(--clr-neutral-400)
+}
+
+.bg-primary-100 {
+    background-color: var(--clr-primary-100)
+}
+
+.bg-neutral-100 {
+    background-color: var(--clr-neutral-100)
+}
+
+.bg-neutral-200 {
+    background-color: var(--clr-neutral-200)
+}
+
+.bg-neutral-300 {
+    background-color: var(--clr-neutral-300)
+}
+
+.bg-neutral-400 {
+    background-color: var(--clr-neutral-400)
+}
+
+.fw-regular {
+    font-weight: var(--fw-regular)
+}
+
+.fw-semi-bold {
+    font-weight: var(--fw-semi-bold)
+}
+
+.primary-heading {
+    font-size: var(--fs-primary-heading);
+    text-align: center
+}
+
+.fs-100 {
+    font-size: var(--fs-100)
+}
+
+.fs-200 {
+    font-size: var(--fs-200)
+}
