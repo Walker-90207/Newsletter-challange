@@ -85,6 +85,7 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center;
     font-size: var(--fs-body);
     font-family: var(--ff-body);
     color: var(--clr-neutral-400);
